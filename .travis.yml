@@ -1,0 +1,14 @@
+env:
+  - DOCKER_COMPOSE_VERSION=1.4.2
+  - CC_TEST_REPORTER_ID=787a2f89b15c637323c7340d65ec17e898ac44480706b4b4122ea040c2a88f1d
+  - GIT_COMMITTED_AT=$(if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then git log -1 --pretty=format:%ct; else git log -1 --skip 1 --pretty=format:%ct; fi)
+sudo: required
+language: ruby
+rvm:
+  - 2.2
+services:
+  - docker
+before_install:
+  - docker-compose ps
+script:
+  - docker-compose run web rake test

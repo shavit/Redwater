@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+invalid_account_1:
+  active: false
+  phone: 123456789
+  code:
+  created_at: 2017-08-19 01:53:43
+  updated_at: 2017-08-19 01:53:43
+
+invalid_account_2:
+  active: false
+  phone:
+  code: randomString
+  created_at: 2017-08-19 01:53:43
+  updated_at: 2017-08-19 01:53:43
+
+valid_account_1:
+  id: 3
+  active: false
+  phone: 1234567890
+  code: randomString
+  created_at: 2017-08-19 01:53:43
+  updated_at: 2017-08-19 01:53:43
+
+valid_account_2:
+  id: 4
+  active: true
+  phone: 1234567809
+  code: randomString
+  created_at: 2017-08-19 01:53:43
+  updated_at: 2017-08-19 01:53:43
